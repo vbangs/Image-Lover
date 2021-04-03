@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 // IMPORT MERCED LOGGER FOR COLORFUL LOGS
 const {log} = require("mercedlogger")
 // Bring in our database string from .env or default string
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/defaultdb"
+const MONGODB_URL = process.env.MONGODB_URL
 
 ///////////////////////////////////
 // Mongoose Configuration Object to Avoid Warnings

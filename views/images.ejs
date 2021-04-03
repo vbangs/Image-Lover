@@ -9,15 +9,15 @@
     <main>
     <div class="container">
       <div class="notification is-primary">
-      <!-- *********DISPLAY OUR GOALS********* -->
+      <!-- *********DISPLAY OUR IMAGES********* -->
       <h1 class="title is-1">My Images</h1>
       <% for (image of images) { %>
-      <h2 class="subtitle is-4"><%= image.text %></h2>
+        <img src="<%= image.url %>" />
       <% } %>
 
-      <!-- **********NEW GOALS FORM**************** -->
+      <!-- **********NEW IMAGES FORM**************** -->
       <form action="/images" method="post">
-        <input type="text" placeholder="new image" name="text" />
+        <input type="text" placeholder="new image" name="url" />
         <input type="submit" value="add image" />
       </form>
     <br></br>
