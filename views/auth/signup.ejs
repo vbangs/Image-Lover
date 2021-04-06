@@ -6,13 +6,17 @@
   <body>
     <!-- THE HEADER TAG PARTIAL -->
     <%- include("../partials/header") %>
-    <main>
-      <h1>User Signup</h1>
-      <form action="/auth/signup" method="post">
-        <input type="text" placeholder="username" name="username" />
-        <input type="password" placeholder="password" name="password" />
-        <input type="submit" value="sign up" />
+    <main class="container">
+      <div class="notification has-background-whiter">
+      <h1 class="title is-3">create account</h1>
+      <form class="basic-form" action="/auth/signup" method="post">
+        <input class="input is-medium is-rounded" type="text" placeholder="username" name="username" />
+        <br></br>
+        <input class="input is-medium is-rounded" type="password" placeholder="password" name="password" />
+        <br></br>
+        <input type="submit" value="signup" class="button is-rounded is-medium"/>
       </form>
+      </div>
     </main>
     <!-- THE HEAD TAG PARTIAL -->
     <%- include("../partials/footer") %>

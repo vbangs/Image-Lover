@@ -7,12 +7,18 @@
     <!-- THE HEADER TAG PARTIAL -->
     <%- include("../partials/header") %>
     <main>
-      <h1>User Login</h1>
-      <form action="/auth/login" method="post">
-        <input type="text" placeholder="username" name="username" />
-        <input type="password" placeholder="password" name="password" />
-        <input type="submit" value="login" />
+    <div class="container">
+      <div class="notification has-background-whiter">
+      <h1 class="title is-3">user login</h1>
+      <form class="basic-form" action="/auth/login" method="post">
+        <input class="input is-medium is-rounded" type="text" placeholder="username" name="username" />
+        <br></br>
+        <input class="input is-medium is-rounded" type="password" placeholder="password" name="password" />
+        <br></br>
+        <input class="button is-medium is-rounded" type="submit" value="login" />
       </form>
+    </div>
+    </div>
     </main>
     <!-- THE HEAD TAG PARTIAL -->
     <%- include("../partials/footer") %>

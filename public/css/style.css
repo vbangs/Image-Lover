@@ -1,7 +1,48 @@
-div {
-    text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@300&display=swap');
 
 h1 {
+    font-family: "Playfair Display", serif;
+    padding: 10px 10px 10px 10px;
+}
+
+#home-title {
     padding: 10px 10px 20px 10px;
+}
+
+#images-title {
+    padding: 10px 10px 22px 10px;
+}
+
+h2 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+ }
+
+button {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0px auto 10px auto;
+}
+
+.button {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin: 30px 5% 0px 5%;
+}
+
+.basic-form {
+    text-align: center;
+    margin: 0 auto 20px auto;
+    max-width: 325px;
+}
+
+.footer {
+    background-color: white;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.footer-icon {
+    size: 20px;
 }

@@ -7,21 +7,26 @@
     <!-- THE HEADER TAG PARTIAL -->
     <%- include("partials/header") %>
     <main>
-    <div class="container">
-      <div class="notification is-primary">
+      <div class="container">
+      <div class="notification has-background-whiter" id="container-images">
       <!-- *********DISPLAY OUR IMAGES********* -->
-      <h1 class="title is-1">My Images</h1>
-      <% for (image of images) { %>
-        <img src="<%= image.url %>" />
-      <% } %>
-
+      <h1 class="title is-2" id="images-title">my images</h1>
+        <div class="columns">
+        <figure class="mx-4 my-4" id="images">
+          <% for (image of images) { %>
+            <img src="<%= image.url %>">
+            <br></br>
+          <% } %>
+        </figure>
+        </div>
       <!-- **********NEW IMAGES FORM**************** -->
-      <form action="/images" method="post">
-        <input type="text" placeholder="new image" name="url" />
-        <input type="submit" value="add image" />
+      <form class="basic-form" action="/images" method="post">
+        <input class="input is-smaller is-rounded" type="text" placeholder="new image" name="url" />
+        <br></br>
+        <input class="button is-smaller is-rounded" type="submit" value="add image" class="button is-rounded is-small"/>
       </form>
     <br></br>
-      <a href="/auth/logout"><button class="button">Logout</button></a>
+      <a href="/auth/logout"><button class="button is-smaller is-rounded">logout</button></a>
     </div>
     </div>
     </main>
