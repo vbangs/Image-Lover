@@ -10,27 +10,26 @@
       <div class="container">
       <div class="notification has-background-whiter" id="container-images">
       <!-- *********DISPLAY OUR IMAGES********* -->
-      <h1 class="title is-2" id="images-title">my images</h1>
-          <figure class="container is-mx-4 is-my-4">
+      <h1 class="title is-2" id="images-title">update my images</h1>
+        <div class="columns">
+          <figure class="mx-4 my-4">
             <% for (image of images) { %>
               <img class="image" src="<%= image.url %>" />
+              <form action="/images/<%= images.id%>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE"/>
+              </form>
               <br></br>
             <% } %>
           </figure>
+        </div>
       <!-- **********NEW IMAGES FORM**************** -->
-      <form class="basic-form" action="/new" method="get">
-        <!-- <input class="input is-smaller is-rounded" type="text" placeholder="new image" name="url" /> -->
-        <input class="button is-smaller is-rounded" type="submit" value="update images" class="button is-rounded is-small"/>
-      </form>
-      <!-- *************DELETE IMAGES FORM**************** -->
-    
-      
-      <!-- <form class="basic-form" action="/images" method="delete">
-        <input class="input is-smaller is-rounded" type="text" placeholder="delete image" name="url" />
+      <form class="basic-form" action="/images" method="post">
+        <input class="input is-smaller is-rounded" type="text" placeholder="new image" name="url" />
         <br></br>
-        <input class="button is-smaller is-rounded" type="submit" value="delete image" class="button is-rounded is-small"/>
-      </form> -->
-
+        <input class="button is-smaller is-rounded" type="submit" value="add image" class="button is-rounded is-small"/>
+      </form>
+      
+    <br></br>
       <a href="/auth/logout"><button class="button is-smaller is-rounded">logout</button></a>
     </div>
     </div>

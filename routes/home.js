@@ -4,6 +4,7 @@
 const router = require("express").Router()
 const bcrypt = require("bcryptjs")
 const User = require("../models/User")
+const Image = require("../models/User")
 
 ///////////////////////////////
 // Custom Middleware Functions
@@ -107,6 +108,22 @@ router.get("/images", isAuthorized, async (req, res) => {
     })
 })
 
+// DELETE
+router.delete("/images/:id", isAuthorized, async (req, res) => {
+    const user = await User.findOne({username: req.user.username})
+    user.images.slice(req.body)
+    // await user.save()
+    // Image.findByIdAndRemove(req.params.id, (error, data) => {
+        res.redirect("/images");
+})
+
+// Update Page route render view
+router.get("/new", isAuthorized, async (req, res) => {
+    res.render("new", {
+        images: req.user.images
+    })
+})
+
 // Images create route when form submitted
 router.post("/images", isAuthorized, async (req, res) => {
     // fetch up-to-date user
@@ -117,6 +134,7 @@ router.post("/images", isAuthorized, async (req, res) => {
     // redirect back to images index
     res.redirect("/images")
 })
+
 
 ///////////////////////////////
 // Export Router
